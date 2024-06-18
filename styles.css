@@ -1,0 +1,84 @@
+:root{
+  /* colors */
+  --clr-violet: #a78bfa;
+  --clr-ltIndigo: #e0e7ff;
+
+  /* fonts */
+  --ft-notoSans: "Noto Sans", sans-serif;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: var(--ft-notoSans);
+}
+
+.container{
+  height: 100vh;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 15% 85%;
+}
+
+.nav_panel{
+  background-color: var(--clr-violet);
+}
+
+.content{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+
+.topBar{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  text-align: center;
+}
+
+.bottomBar{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.userGreeting{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  text-align: left;
+}
+
+.posts {
+  background-color: var(--clr-ltIndigo);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.sidebar{
+  grid-column-start: 3;
+}
+
+.postButtons button{
+  background-color: var(--clr-violet);
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+}
+.postButtons button a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+

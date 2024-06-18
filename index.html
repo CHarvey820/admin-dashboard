@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Admin Dashboard</title>
   </head>
   <body>
@@ -24,41 +27,55 @@
           <span class="privacy"></span>
         </section>
       </section>
-      <section class="header">
-        <div class="topBar">
-          <section class="search"><div class="searchBar"></div></section>
-          <section class="userInfo">
-            <button class="notification"></button>
-            <button class="userIconSmall"></button>
-            <span>Maple Lizard</span>
-          </section>
-        </div>
-        <div class="bottomBar">
-          <section class="userGreeting"></section>
-          <section class="postButtons"></section>
-        </div>
-      </section>
-      <section class="content">
-        <section class="posts">
-            <h2>Your Projects</h2>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+      <div class="pageContent">
+        <section class="header">
+          <div class="topBar">
+            <section class="search"><div class="searchBar"><textarea name="search" id="search"></textarea></div></section>
+            <section class="userInfo">
+              <button class="notification"></button>
+              <button class="userIconSmall"></button>
+              <span>Maple Lizard</span>
+            </section>
+          </div>
+          <div class="bottomBar">
+            <div>
+              <div class="userIconLarge"></div>
+              <section class="userGreeting">
+                <span>Hi there,</span>
+                <span>Maple Lizard (@maplethelizard)</span>
+              </section>
+            </div>
+            <section class="postButtons">
+              <button class="btnNew"><a href="#">New</a></button>
+              <button class="btnUpload"><a href="#">Upload</a></button>
+              <button class="btnShare"><a href="#">Share</a></button>
+            </section>
+          </div>
         </section>
-        <section class="sidebar">
-          <section class="announcements">
-            <h2>Announcements</h2>
-            <div class="announcementsContainer"></div>
+        <section class="content">
+          <section class="posts">
+              <h2>Your Projects</h2>
+              <div class="cards_container">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+              </div>
           </section>
-          <section class="trending">
-            <h2>Trending</h2>
-            <div class="trendingContainer"></div>
+          <section class="sidebar">
+            <section class="announcements">
+              <h2>Announcements</h2>
+              <div class="announcementsContainer"></div>
+            </section>
+            <section class="trending">
+              <h2>Trending</h2>
+              <div class="trendingContainer"></div>
+            </section>
           </section>
         </section>
-      </section>
+      </div>
     </div>
   </body>
 </html>
