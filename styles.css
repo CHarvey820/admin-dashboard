@@ -1,6 +1,7 @@
 :root{
   /* colors */
   --clr-violet: #a78bfa;
+  --clr-dkViolet: #7c3aed;
   --clr-ltIndigo: #e0e7ff;
 
   /* fonts */
@@ -22,11 +23,37 @@ body{
   font-family: var(--ft-notoSans);
 }
 
+textarea{
+  resize: none;
+  background-color: var(--clr-ltIndigo);
+  border: none;
+  border-radius: 1.5rem;
+  font-size: .75rem;
+  padding: .5rem;
+  width: 35rem;
+}
+
 .container{
   height: 100vh;
   display: grid;
   overflow: hidden;
   grid-template-columns: 15% 85%;
+}
+
+.header{
+  margin: 1rem 2rem;
+}
+
+.icon{
+  max-width: 75px;
+  max-height: 75px;
+  border-radius: 50%;
+}
+
+.iconSmall{
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
 }
 
 .nav_panel{
@@ -41,20 +68,49 @@ body{
 
 .topBar{
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  text-align: center;
+  grid-template-columns: 45px 2fr 1fr;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+  
+}
+
+.userInfo{
+  display: grid;
+  grid-template-columns: 3rem 4rem 1fr;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.userInfo, .postButtons{
+  grid-column-start: 3;
 }
 
 .bottomBar{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
+  grid-template-columns: 90px 54.3rem 1fr;
+  align-items: center;
+  text-align: left;
 }
+
 
 .userGreeting{
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: .5fr 1fr;
   text-align: left;
+  grid-column-start: 1;
+
+}
+
+.textSmall{
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.userGreeting:nth-child(1){
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 
 .posts {
@@ -67,18 +123,28 @@ body{
 }
 
 .sidebar{
+  background-color: var(--clr-ltIndigo);
   grid-column-start: 3;
 }
 
 .postButtons button{
   background-color: var(--clr-violet);
+  width: 6rem;
   padding: .75rem 1.5rem;
   border-radius: 2rem;
   border: none;
+  cursor: pointer;
+  margin: 0 .25rem;
 }
+
+.postButtons button:hover{
+  background-color: var(--clr-dkViolet);
+}
+
 .postButtons button a{
   text-decoration: none;
   color: white;
   font-weight: 700;
+  
 }
 
