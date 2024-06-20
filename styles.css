@@ -6,6 +6,7 @@
   --clr-ltIndigo: #e0e7ff;
   --clr-gray: #6b7280;
   --clr-ltGray: #cbd5e1;
+  --clr-red: #991b1b;
 
   /* fonts */
   --ft-notoSans: "Noto Sans", sans-serif;
@@ -42,7 +43,7 @@ hr{
 }
 
 .container{
-  height: 113vh;
+  height: 108vh;
   display: grid;
   overflow: hidden;
   grid-template-columns: 15% 85%;
@@ -59,9 +60,10 @@ hr{
 }
 
 .iconSmall{
-  max-width: 45px;
-  max-height: 45px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .nav_panel{
@@ -80,7 +82,10 @@ hr{
   justify-content: space-between;
   margin-bottom: 1.5rem;
   align-items: center;
-  
+}
+
+.topBar svg{
+  cursor: pointer;
 }
 
 .userInfo{
@@ -113,7 +118,6 @@ hr{
   grid-template-rows: .5fr 1fr;
   text-align: left;
   grid-column-start: 1;
-
 }
 
 .textSmall{
@@ -145,7 +149,8 @@ hr{
   padding: 2rem;
   border-radius: 1rem;
   max-height: 300px;
-  border-left: rgb(146, 29, 29) inset 1rem;
+  border-left: var(--clr-red) inset 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .card p{
@@ -153,7 +158,7 @@ hr{
 }
 
 .postActions{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -163,10 +168,12 @@ hr{
   flex-direction: row;
   justify-content: end;
   align-items: end;
+  gap: .5rem;
+  cursor: pointer;
 }
 
 .ownerInfo{
-  font-size: 1rem;
+  font-size: .75rem;
 }
 
 .sidebar{
@@ -247,6 +254,7 @@ margin-bottom: 1rem;
   background-color: white;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .trendingAcct{
@@ -254,7 +262,6 @@ margin-bottom: 1rem;
   grid-template-columns: 1fr 2fr;
   padding: .75rem 0;
 }
-
 
 .announcementsContainer h3{
 margin: .15rem 0;
