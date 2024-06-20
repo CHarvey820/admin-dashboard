@@ -1,8 +1,11 @@
 :root{
   /* colors */
-  --clr-violet: #a78bfa;
+  --clr-violet: #8b5cf6;
+  --clr-ltViolet: #ddd6fe;
   --clr-dkViolet: #7c3aed;
   --clr-ltIndigo: #e0e7ff;
+  --clr-gray: #6b7280;
+  --clr-ltGray: #cbd5e1;
 
   /* fonts */
   --ft-notoSans: "Noto Sans", sans-serif;
@@ -30,11 +33,16 @@ textarea{
   border-radius: 1.5rem;
   font-size: .75rem;
   padding: .5rem;
-  width: 35rem;
+  width: 50rem;
+}
+
+hr{
+  margin: .5rem 0;
+  border: 1px solid var(--clr-ltGray);
 }
 
 .container{
-  height: 100vh;
+  height: 113vh;
   display: grid;
   overflow: hidden;
   grid-template-columns: 15% 85%;
@@ -68,9 +76,9 @@ textarea{
 
 .topBar{
   display: grid;
-  grid-template-columns: 45px 2fr 1fr;
+  grid-template-columns: 45px 5fr 1fr;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   align-items: center;
   
 }
@@ -87,11 +95,16 @@ textarea{
   grid-column-start: 3;
 }
 
+.postButtons{
+  text-align: right;
+}
+
 .bottomBar{
   display: grid;
-  grid-template-columns: 90px 54.3rem 1fr;
+  grid-template-columns: 90px 60rem 1fr;
   align-items: center;
   text-align: left;
+  margin-left: 2.75rem;
 }
 
 
@@ -115,11 +128,45 @@ textarea{
 
 .posts {
   background-color: var(--clr-ltIndigo);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.cards_container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.card{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-height: 300px;
+  border-left: rgb(146, 29, 29) inset 1rem;
+}
+
+.card p{
+  font-size: .8rem;
+}
+
+.postActions{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.postIcons{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+}
+
+.ownerInfo{
+  font-size: 1rem;
 }
 
 .sidebar{
@@ -129,8 +176,8 @@ textarea{
 
 .postButtons button{
   background-color: var(--clr-violet);
-  width: 6rem;
-  padding: .75rem 1.5rem;
+  width: 8rem;
+  padding: 1rem 1.5rem;
   border-radius: 2rem;
   border: none;
   cursor: pointer;
@@ -145,6 +192,80 @@ textarea{
   text-decoration: none;
   color: white;
   font-weight: 700;
-  
 }
 
+.nav_panel{
+  color: white;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.logo{
+display: grid;
+grid-template-columns: 60px 100%;
+align-items: center;
+margin-bottom: 2rem;
+pointer-events: none;
+}
+
+.menu_main{
+  margin-bottom: 3rem;
+}
+
+.menu_main > *, .menu_settings > *{
+display: grid;
+grid-template-columns: 50px 80%;
+align-items: center;
+padding-left: 10px;
+cursor: pointer;
+margin-bottom: 1rem;
+}
+
+.menu_main *:hover, .menu_settings *:hover{
+  color: var(--clr-ltViolet);
+}
+
+.posts{
+  padding: 1rem 2rem;
+}
+
+.sidebar{
+  padding: 0 2rem;
+
+}
+
+.sidebar p{
+  font-size: .75rem;
+  color: var(--clr-gray);
+}
+
+.announcementsContainer{
+  margin-bottom: 1.5rem;
+}
+
+.announcementsContainer, .trendingContainer{
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.trendingAcct{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: .75rem 0;
+}
+
+
+.announcementsContainer h3{
+margin: .15rem 0;
+font-size: 1rem;
+}
+
+.announcements h2{
+  margin-top: 1rem;
+  margin-bottom: .75rem;
+}
+
+.trending h2{
+  margin-bottom: .75rem;
+}
